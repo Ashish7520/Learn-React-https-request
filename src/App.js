@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 
 import MoviesList from "./components/MoviesList";
 import "./App.css";
+import AddMovie from "./components/AddMovie";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -39,8 +40,15 @@ function App() {
     fetchHandler();
   }, [fetchHandler]);
 
+  const movieDataHandler = (data) => {
+    console.log("inside app js file", data);
+  };
+
   return (
     <React.Fragment>
+      <section>
+        <AddMovie onSubmitData={movieDataHandler} />
+      </section>
       <section>
         <button onClick={fetchHandler}>Fetch Movies</button>
       </section>

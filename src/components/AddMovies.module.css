@@ -1,0 +1,16 @@
+form {
+  display: grid;
+  gap: 15px;
+}
+
+label {
+  text-align: left;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
